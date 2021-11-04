@@ -1,3 +1,3 @@
 @ECHO OFF
-py -m pytest -v
+py -m pytest -v --cov=SillyStateMachine
 PAUSE

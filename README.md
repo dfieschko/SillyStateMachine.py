@@ -3,10 +3,6 @@ A simple state machine running on its own thread that chooses states from a dict
 
 The main purpose of this project was to familiarize myself with automated unit tests with Github Actions and pytest.
 
-```
-pip install SillyStateMachine
-```
-
 ## Creating a state machine with SillyStateMachine
 ```python
 from SillyStateMachine import SillyStateMachine

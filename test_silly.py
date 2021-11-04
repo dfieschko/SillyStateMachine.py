@@ -14,6 +14,7 @@ class BasicStateMachine(SillyStateMachine):
             "State 1" : self._state_1,
             "State 2" : self._state_2,
             "State 3" : self._state_3,
+            "Idle" : self._idle
         }
 
         self.interrupted = False
@@ -71,6 +72,7 @@ def test_basic_start_stop():
     assert machine.next_state == "Start"
     assert machine.status == "I started!"
     assert machine.period == 0.002
+    assert machine.getPeriod() == 0.002
     machine.stop()
     assert machine.isRunning() == False
     assert machine.status == "Stopped!"
@@ -124,4 +126,3 @@ def test_basic_kwargs_ret():
     ]
     actual_ret_list = machine.ret_list
     check_list(correct_ret_list, actual_ret_list)
-

@@ -10,7 +10,7 @@ setup(
   long_description_content_type = 'text/markdown',
   author = 'Darius Fieschko',
   author_email = 'dfieschko@gmail.com',
-  url = 'https://github.com/dfieschko/RP1210',
+  url = 'https://github.com/dfieschko/SillyStateMachine.py',
   install_requires=[],
   classifiers=[
     'Development Status :: 3 - Alpha',      # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
