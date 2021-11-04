@@ -126,6 +126,3 @@ def test_basic_kwargs_ret():
     ]
     actual_ret_list = machine.ret_list
     check_list(correct_ret_list, actual_ret_list)
-
-def test_fail():
-    assert False
