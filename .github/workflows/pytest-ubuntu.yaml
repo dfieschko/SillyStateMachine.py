@@ -25,5 +25,4 @@ jobs:
       - name: Test
         run: |
           pip install --upgrade -q pytest
-          pip install --upgrade -q pytest-cov
-          python -m pytest -v --cov=SillyStateMachine
+          python -m pytest -v
