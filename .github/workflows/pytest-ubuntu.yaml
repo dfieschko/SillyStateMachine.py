@@ -1,4 +1,4 @@
-name: pytest-ubuntu
+name: Test on Ubuntu
 
 on: [push, pull_request, workflow_dispatch] # run on pull requests and push events, allow manual use
 

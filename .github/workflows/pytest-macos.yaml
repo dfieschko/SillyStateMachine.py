@@ -1,4 +1,4 @@
-name: pytest-macos
+name: Test on MacOS
 
 on: [push, pull_request, workflow_dispatch] # run on pull requests and push events, allow manual use
 

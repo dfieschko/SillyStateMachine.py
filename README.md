@@ -1,7 +1,10 @@
 # SillyStateMachine.py
-A simple state machine running on its own thread that chooses states from a dict of state names and function pointers.
+A simple state machine running on its own thread that chooses states from a dict of state names and function pointers. Each state specifies a mnemonic for next_state, which determines what the next state will be.
 
-The main purpose of this project was to familiarize myself with automated unit tests with Github Actions and pytest.
+The main purpose of this project was to familiarize myself with automated unit tests with Github Actions and pytest. Some fancy badges:
+![Test on MacOS](https://github.com/dfieschko/SillyStateMachine.py/actions/workflows/pytest-macos.yaml/badge.svg)
+![Test on Windows](https://github.com/dfieschko/SillyStateMachine.py/actions/workflows/pytest-windows.yaml/badge.svg)
+![Test on Ubuntu](https://github.com/dfieschko/SillyStateMachine.py/actions/workflows/pytest-ubuntu.yaml/badge.svg)
 
 ## Creating a state machine with SillyStateMachine
 ```python
