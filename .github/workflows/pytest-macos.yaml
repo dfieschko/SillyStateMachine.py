@@ -1,4 +1,4 @@
-name: pytest
+name: pytest-macos
 
 on: [push, pull_request, workflow_dispatch] # run on pull requests and push events, allow manual use
 
@@ -8,9 +8,9 @@ jobs:
     strategy:
       fail-fast: false  # don't quit all jobs if a single job fails
       matrix:           # set up multiple environments to test on
-        os: macos-latest
+        os: [macos-latest]
         python-version: [3.5, 3.6, 3.7, 3.8, 3.9] # test python 3.5 & onward
-        architecture: x64
+        architecture: [x64]
 
     steps: # steps to take to test package
       - name: Checkout
