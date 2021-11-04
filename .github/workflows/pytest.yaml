@@ -9,7 +9,7 @@ jobs:
       fail-fast: false  # don't quit all jobs if a single job fails
       matrix:           # set up multiple environments to test on
         os: ["ubuntu-latest", "windows-latest", "macos-latest"]           # cover all our bases
-        python-version: ["3.5.10", "3.6.15", "3.7.12", "3.8.12", "3.9.7"] # test python 3.5 & onward
+        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9"] # test python 3.5 & onward
         architecture: ["x64", "x86"]
 
     steps: # steps to take to test package
@@ -19,8 +19,8 @@ jobs:
       - name: Setup
         uses: actions/setup-python@v2 # https://github.com/actions/setup-python
         with:
-          python-version: ${{ matrix.python-version }}  # test on all python versions specified
-          architecture: ${{ matrix.architecture }}      # test on all architectures specified
+          python-version: 3.9 #${{ matrix.python-version }}  # test on all python versions specified
+          architecture: x64 #${{ matrix.architecture }}      # test on all architectures specified
       
       - name: Install
         run: |
