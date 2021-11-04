@@ -8,9 +8,9 @@ jobs:
     strategy:
       fail-fast: false  # don't quit all jobs if a single job fails
       matrix:           # set up multiple environments to test on
-        os: ["ubuntu-latest", "windows-latest", "macos-latest"]           # cover all our bases
+        os: ubuntu-latest
         python-version: [3.5, 3.6, 3.7, 3.8, 3.9] # test python 3.5 & onward
-        architecture: [x64, x86]
+        architecture: x64
 
     steps: # steps to take to test package
       - name: Checkout
@@ -21,11 +21,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}  # test on all python versions specified
           architecture: ${{ matrix.architecture }}      # test on all architectures specified
-      
-      - name: Install
-        run: |
-          pip install --upgrade -q pytest
-          pip install --upgrade -q pytest-cov
 
       - name: Test
         run: |
